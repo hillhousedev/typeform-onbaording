@@ -93,7 +93,69 @@ body {
             .answer.selected {
                 background-color: var(--color-light-blue);
                 color: red;
-                transform: scaleX(400);
+                // transform: scaleX(400);
+                content: 'Hello sola';
+            }
+        }
+    }
+    .actions {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+        button.previous {
+            background: #fff;
+            padding: 5px 8px;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solidvar(--color-light-1);
+            cursor: pointer;
+            .icon-back {
+                width: 30px;
+                height: 30px;
+                fill: var(--color-light-blue);
+            }
+        }
+        button.next {
+            margin-left: 15px;
+            background: var(--color-light-blue);
+            color: #fff;
+            padding: 5px 90px;
+            outline: none;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.progress {
+    &_bar {
+        margin: 40px 0;
+        height: 20px;
+        background: var(--color-light-2);
+        overflow: hidden;
+        border-radius: 10px;
+        width: 400px;
+        align-self: center;
+        &-slider {
+            height: inherit;
+            width: 0%;
+            background: var(--color-light-blue);
+            border-radius: 10px;
+        }
+    }
+    &_actions {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        align-self: center;
+        color: var(--color-grey-1);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        .p-actions-left {
+            span:nth-child(2) {
+                margin: 0 5px;
             }
         }
     }

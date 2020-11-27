@@ -36,33 +36,31 @@
                 </div>
             </div>
         </div>
-        <div class="question">
-            <div class="question" #questionContainer>
-                <h2 class="question_heading">Question What is your name?</h2>
-                <div class="question_q">What is the text</div>
-                <div class="question_answers" #answer>
-                    <div class="answer">
-                        My Answer is answer, to be filled by angular module second
 
-                        <p>The real answer will be delivered by angular second</p>
 
-                    </div>
-                </div>
-            </div>
+
+
+        <div class="actions" #actions>
+            <button class="previous" (click)="prev()">
+                <svg class="icon icon-back">
+                    <use href="./assets/icons.svg#icon-chevron-left"></use>
+                </svg>
+            </button>
+            <button class="next" (click)="goToNextQuestion()">Next</button>
+        </div>
+        <div class="progress_bar">
+            <div #slider class="progress_bar--slider"></div>
         </div>
 
-        <div class="question">
-            <div class="question" #questionContainer>
-                <h2 class="question_heading">Question What is your name?</h2>
-                <div class="question_q">What is the text</div>
-                <div class="question_answers" #answer>
-                    <div class="answer">
-                        My Answer is answer, to be filled by angular module third
+        <div class="progress_actions" #progress>
+            <div class="p-actions-left">
+                <span>Step 1</span>
+                <span>Out of </span>
+                <span>20</span>
 
-                        <p>The real answer will be delivered by angular third</p>
-
-                    </div>
-                </div>
+            </div>
+            <div class="p-actions-right">
+                <span>10%</span>
             </div>
         </div>
 
