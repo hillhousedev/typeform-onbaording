@@ -10,3 +10,108 @@
     --color-light-blue: #506ef9;
     --default-shadow: rgba(138, 138, 138, 0.1);
 }
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    box-sizing: inherit;
+    position: relative;
+    background-color: var(--color-light);
+    padding: 50px;
+}
+
+.main {
+    background: #fff;
+    box-shadow: 0 15px 10px var(--default-shadow);
+    height: calc(100vh - 100px);
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: [layout-start] minmax(120px, 1fr) [center-start] repeat( 12, minmax(min-content, 95px)) [center-end] minmax(120px, 1fr) [layout-end];
+    grid-template-rows: 120px 1fr;
+    grid-row-gap: 50px;
+    overflow: hidden;
+    overflow-y: scroll;
+    // border: solid 3px var(--color-black);
+}
+
+.header {
+    grid-row: 1 / 2;
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: 150px 1fr 200px;
+    align-items: center;
+    // border: solid 3px var(--color-black);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.menu {
+    grid-column: 2 / 3;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, min-content));
+    justify-content: center;
+    &__link,
+    &__link:link,
+    &__link:active {
+        text-transform: uppercase;
+        font-size: 15px;
+        padding-top: 5px;
+    }
+    &__link.active {
+        border-top: 2px solid var(--color-light-blue);
+        font-weight: 600;
+    }
+}
+
+.logo {
+    grid-column: 1 / 2;
+    h2 {
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+}
+
+.search {
+    grid-column: 3 / -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .search-icon {
+        background-color: #fff;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        .icon {
+            border: 2px solid var(--color-grey);
+            border-radius: 50%;
+            padding: 5px;
+        }
+    }
+    .call {
+        background: #fff;
+        outline: 0;
+        padding: 6px 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        border: 2px solid var(--color-grey);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+}
+
+.questionnaire {}

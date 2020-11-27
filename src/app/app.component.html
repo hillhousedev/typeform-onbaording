@@ -1,0 +1,37 @@
+<div class="main" #main>
+    <div class="header">
+        <div class="logo" #logo>
+            <h2>Typeform Onboard</h2>
+        </div>
+
+        <ul class="menu" #menu>
+            <li class="menu-item"><a class="menu__link active">Menu 1</a></li>
+            <li class="menu__item"><a class="menu__link">Menu 2</a></li>
+            <li class="menu__item"><a class="menu__link">Menu 3</a></li>
+            <li class="menu__item"><a class="menu__link">Menu 4</a></li>
+            <li class="menu__item"><a class="menu__link">Menu 5</a></li>
+        </ul>
+        <div class="search" #search>
+            <button class="search-icon">
+                <svg class="icon icon-search">
+                    <use href="./assets/icons.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+            <button class="call">Get In Touch</button>
+        </div>
+
+    </div>
+    <div class="questionnaire">
+        <div class="question">
+            <div class="question" #questionContainer>
+                <h2 class="question_heading">Question What is your name?</h2>
+                <div class="question_q">What is the text</div>
+                <div class="question_answers" #answer>
+                    <div class="answer">
+                        My Answer is answer, to be filled by angular module
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
